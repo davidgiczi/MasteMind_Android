@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.david.giczi.mastermind.MainActivity">
+    <item
+        android:id="@+id/new_game_setting"
+        android:orderInCategory="100"
+        android:title="@string/new_game"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/different_colors_setting"
+        android:orderInCategory="100"
+        android:title="@string/different_colors"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/same_color_setting"
+        android:orderInCategory="100"
+        android:title="@string/same_colors"
+        app:showAsAction="never" />
+</menu>

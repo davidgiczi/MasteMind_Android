@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MasterMind</string>
+    <string name="different_colors">Különböző színek</string>
+    <string name="same_colors">Megegyező színek</string>
+    <string name="new_game">Új játék</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">MasterMind Game App</string>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="brown_for_background">#A57C00</color>
+    <color name="mastermind_text">#D2042D</color>
+    <color name="brown_for_cover">#996515</color>
+    <color name="normal_green">#84DE02</color>
+    <color name="blue">#4F86F7</color>
+    <color name="yellow">#FFA500</color>
+    <color name="light_green">#44D7A8</color>
+    <color name="red">#ED0A3F</color>
+    <color name="pink">#FC74FD</color>
+    <color name="gray">#828E84</color>
+</resources>
