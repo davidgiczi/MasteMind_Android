@@ -1,5 +1,6 @@
 package com.david.giczi.mastermind;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -20,6 +21,7 @@ import com.david.giczi.mastermind.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Hello World!", Toast.LENGTH_LONG).show();
+            }
+        });
+        findViewById(R.id.row_1_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_1_1);
+                btn.setForeground(getDrawable(R.drawable.red_btn_style));
             }
         });
     }
