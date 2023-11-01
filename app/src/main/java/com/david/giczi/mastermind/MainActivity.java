@@ -1,17 +1,15 @@
 package com.david.giczi.mastermind;
 
-import android.graphics.Color;
+import android.content.pm.ActivityInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import androidx.appcompat.view.menu.ActionMenuItem;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.view.MenuCompat;
-import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -22,18 +20,36 @@ import com.david.giczi.mastermind.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     private Menu optionsMenu;
+    private static List<Drawable> COLORS;
+
+    private Drawable getDrawableForNextColor(Drawable actualDrawable){
+        int actualDrawableIndex = COLORS.indexOf(actualDrawable);
+        return actualDrawableIndex == 8 ? COLORS.get(0) : COLORS.get(actualDrawableIndex + 1);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        COLORS = Arrays.asList(
+                getDrawable(R.drawable.red_btn_style),
+                getDrawable(R.drawable.blue_btn_style),
+                getDrawable(R.drawable.purple_btn_style),
+                getDrawable(R.drawable.yellow_btn_style),
+                getDrawable(R.drawable.green_btn_style),
+                getDrawable(R.drawable.white_btn_style),
+                getDrawable(R.drawable.light_green_btn_style),
+                getDrawable(R.drawable.gray_btn_style),
+                getDrawable(R.drawable.black_btn_style));
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -41,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         findViewById(R.id.ok_1).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +69,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Button btn = (Button) findViewById(R.id.row_1_1);
-                btn.setForeground(getDrawable(R.drawable.red_btn_style));
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_1_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_1_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_1_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_1_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_1_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_1_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
             }
         });
     }
