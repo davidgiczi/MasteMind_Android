@@ -31,15 +31,23 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private Menu optionsMenu;
     private static List<Drawable> COLORS;
+    private static int COLOR_INDEX = 5;
+    private MasterMind logic;
 
     private Drawable getDrawableForNextColor(Drawable actualDrawable){
         int actualDrawableIndex = COLORS.indexOf(actualDrawable);
-        return actualDrawableIndex == 8 ? COLORS.get(0) : COLORS.get(actualDrawableIndex + 1);
+        return actualDrawableIndex == COLOR_INDEX ? COLORS.get(0) : COLORS.get(actualDrawableIndex + 1);
     }
+
+    private int getDrawableColorIndex(Drawable actualDrawable){
+        return COLORS.indexOf(actualDrawable);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        logic = new MasterMind(COLOR_INDEX + 1, false);
         COLORS = Arrays.asList(
                 getDrawable(R.drawable.red_btn_style),
                 getDrawable(R.drawable.blue_btn_style),
@@ -62,7 +70,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ok_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Hello World!", Toast.LENGTH_LONG).show();
+                findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.white_circle));
+                findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.white_circle));
+                findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.black_circle));
+                findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
             }
         });
         findViewById(R.id.row_1_1).setOnClickListener(new View.OnClickListener() {
@@ -123,6 +134,30 @@ public class MainActivity extends AppCompatActivity {
             item.setTitle(R.string.different_colors_OK);
             optionsMenu.findItem(R.id.same_color_setting).setTitle(R.string.same_colors);
         }
+        else if( id == R.id.colors_6 ){
+            item.setTitle(R.string.colors_6_X);
+            optionsMenu.findItem(R.id.colors_7).setTitle(R.string.colors_7);
+            optionsMenu.findItem(R.id.colors_8).setTitle(R.string.colors_8);
+            optionsMenu.findItem(R.id.colors_9).setTitle(R.string.colors_9);
+        }
+        else if( id == R.id.colors_7 ){
+            item.setTitle(R.string.colors_7_X);
+            optionsMenu.findItem(R.id.colors_6).setTitle(R.string.colors_6);
+            optionsMenu.findItem(R.id.colors_8).setTitle(R.string.colors_8);
+            optionsMenu.findItem(R.id.colors_9).setTitle(R.string.colors_9);
+        }
+        else if( id == R.id.colors_8 ){
+            item.setTitle(R.string.colors_8_X);
+            optionsMenu.findItem(R.id.colors_6).setTitle(R.string.colors_6);
+            optionsMenu.findItem(R.id.colors_7).setTitle(R.string.colors_7);
+            optionsMenu.findItem(R.id.colors_9).setTitle(R.string.colors_9);
+        }
+        else if( id == R.id.colors_9 ){
+            item.setTitle(R.string.colors_9_X);
+            optionsMenu.findItem(R.id.colors_6).setTitle(R.string.colors_6);
+            optionsMenu.findItem(R.id.colors_7).setTitle(R.string.colors_7);
+            optionsMenu.findItem(R.id.colors_8).setTitle(R.string.colors_8);
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -133,4 +168,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

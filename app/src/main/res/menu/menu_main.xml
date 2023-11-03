@@ -2,11 +2,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.david.giczi.mastermind.MainActivity">
+    <group android:id="@+id/new_game_group">
     <item
         android:id="@+id/new_game_setting"
         android:orderInCategory="100"
         android:title="@string/new_game"
         app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/number_of_colors_group">
+        <item
+            android:id="@+id/colors_6"
+            android:orderInCategory="100"
+            android:title="@string/colors_6_X"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/colors_7"
+            android:orderInCategory="100"
+            android:title="@string/colors_7"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/colors_8"
+            android:orderInCategory="100"
+            android:title="@string/colors_8"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/colors_9"
+            android:orderInCategory="100"
+            android:title="@string/colors_9"
+            app:showAsAction="never" />
+    </group>
+
     <item
         android:id="@+id/different_colors_setting"
         android:orderInCategory="100"

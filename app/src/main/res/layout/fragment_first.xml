@@ -133,10 +133,10 @@
             android:id="@+id/ok_1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="190dp"
             android:layout_marginStart="20dp"
-            android:text="@string/ok"
+            android:layout_marginTop="190dp"
             android:fontFamily="@font/coustard"
+            android:text="@string/ok"
             android:textColor="@color/red"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -144,6 +144,51 @@
             app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toEndOf="@+id/row_1_4"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/circle_1_1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="190dp"
+            android:src="@drawable/background_circle"
+            app:layout_constraintEnd_toStartOf="@+id/row_1_1"
+            app:layout_constraintHorizontal_bias="0.225"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/circle_1_2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="190dp"
+            android:src="@drawable/background_circle"
+            app:layout_constraintEnd_toStartOf="@+id/row_1_1"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintStart_toEndOf="@+id/circle_1_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/circle_1_3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/background_circle"
+            app:layout_constraintEnd_toStartOf="@+id/row_1_1"
+            app:layout_constraintHorizontal_bias="0.225"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circle_1_2" />
+
+        <ImageView
+            android:id="@+id/circle_1_4"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/background_circle"
+            app:layout_constraintEnd_toStartOf="@+id/row_1_1"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintStart_toEndOf="@+id/circle_1_3"
+            app:layout_constraintTop_toBottomOf="@+id/circle_1_2" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

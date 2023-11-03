@@ -5,6 +5,14 @@
     <string name="same_colors">Megegyező színek</string>
     <string name="same_colors_OK">Megegyező színek ✅</string>
     <string name="new_game">Új játék</string>
+    <string name="colors_6">6</string>
+    <string name="colors_6_X">6 ❌</string>
+    <string name="colors_7">7</string>
+    <string name="colors_7_X">7 ❌</string>
+    <string name="colors_8">8</string>
+    <string name="colors_8_X">8 ❌</string>
+    <string name="colors_9">9</string>
+    <string name="colors_9_X">9 ❌</string>
     <string name="ok">OK</string>
     <!-- Strings used for fragments for navigation -->
 
