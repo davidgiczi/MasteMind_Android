@@ -47,19 +47,17 @@ private List<Integer> task;
     }
 
     public List<Integer> evaluateTipp(int tipp1, int tipp2, int tipp3, int tipp4){
-        List<Integer> tipps = Arrays.asList(tipp1, tipp2, tipp3, tipp4);
+        List<Integer> tips = Arrays.asList(tipp1, tipp2, tipp3, tipp4);
         List<Integer> results = new ArrayList<>();
         for (int i = 0; i < task.size(); i++) {
-            for (int j = 0; j < tipps.size() ; j++) {
-                if(task.get(i) == tipps.get(j) && i == j){
-                    tipps.set(j , -1);
+                if(task.get(i) == tips.get(i)) {
+                    tips.set(i, -1);
                     results.add(1);
                 }
-            }
         }
 
         for (int i = 0; i < task.size(); i++) {
-            if(tipps.contains(task.get(i))){
+            if(tips.contains(task.get(i))){
                 results.add(2);
             }
         }
