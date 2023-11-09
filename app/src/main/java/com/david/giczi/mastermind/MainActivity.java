@@ -27,43 +27,36 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private Menu optionsMenu;
     private static List<Drawable> COLORS;
-    private static int COLOR_INDEX = 8;
+    private static int COLOR_NUMBER = 6;
+    private static boolean IS_DIFFERENT_COLORS = true;
     private MasterMind logic;
 
     private Drawable getDrawableForNextColor(Drawable actualDrawable){
         int actualDrawableIndex = COLORS.indexOf(actualDrawable);
-        return actualDrawableIndex == COLOR_INDEX ? COLORS.get(0) : COLORS.get(actualDrawableIndex + 1);
+        return actualDrawableIndex == COLOR_NUMBER - 1 ? COLORS.get(0) : COLORS.get(actualDrawableIndex + 1);
     }
 
     private int getDrawableColorIndex(Drawable actualDrawable){
         return COLORS.indexOf(actualDrawable);
     }
-
+    private void init(){
+        logic = new MasterMind(COLOR_NUMBER, IS_DIFFERENT_COLORS);
+        showTask(logic.getTask());
+        findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn1 = (Button) findViewById(R.id.row_1_1);
+        Button btn2 = (Button) findViewById(R.id.row_1_2);
+        Button btn3 = (Button) findViewById(R.id.row_1_3);
+        Button btn4 = (Button) findViewById(R.id.row_1_4);
+        btn1.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn2.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn3.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn4.setForeground(getDrawable(R.drawable.default_btn_style));
+    }
     private void runIntro(){
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            long endTime = System.currentTimeMillis() + 5 * 1000;
-            Button task1 = (Button) findViewById(R.id.task_1);
-            Button task2 = (Button) findViewById(R.id.task_2);
-            Button task3 = (Button) findViewById(R.id.task_3);
-            Button task4 = (Button) findViewById(R.id.task_4);
-            @Override
-            public void run() {
-                /*task1.setForeground(COLORS.get((int) (Math.random() * COLOR_INDEX)));
-                task2.setForeground(COLORS.get((int)Math.random() * 5));
-                task3.setForeground(COLORS.get((int)Math.random() * 5));
-                task4.setForeground(COLORS.get((int)Math.random() * 5));*/
-                if( System.currentTimeMillis() > endTime ){
-                    timer.cancel();
-                    timer.purge();
-                    /*task1.setForeground(getDrawable(R.drawable.default_btn_style));
-                    task2.setForeground(getDrawable(R.drawable.default_btn_style));
-                    task3.setForeground(getDrawable(R.drawable.default_btn_style));
-                    task4.setForeground(getDrawable(R.drawable.default_btn_style));*/
-                }
-            }
-        };
-        timer.schedule(task, 0, 100);
+
     }
 
     private void evaluateFirstRowTip(){
@@ -71,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn2 = (Button) findViewById(R.id.row_1_2);
     Button btn3 = (Button) findViewById(R.id.row_1_3);
     Button btn4 = (Button) findViewById(R.id.row_1_4);
-    List<Integer> results = logic.evaluateTipp(
+    List<Integer> results = logic.evaluateTip(
             getDrawableColorIndex(btn1.getForeground()),
             getDrawableColorIndex(btn2.getForeground()),
             getDrawableColorIndex(btn3.getForeground()),
@@ -103,15 +96,14 @@ public class MainActivity extends AppCompatActivity {
         else if( i == 3 && results.get(i) == 2 ){
             findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
         }
-
+    }
         if(results.size() == 4 &&
                 results.get(0) == 1 &&
-                    results.get(1) == 1 &&
-                        results.get(2) == 1 &&
-                            results.get(3) == 1){
+                results.get(1) == 1 &&
+                results.get(2) == 1 &&
+                results.get(3) == 1){
             Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
         }
-    }
 }
     private void showTask(List<Integer> task){
         Button btn1 = (Button) findViewById(R.id.task_1);
@@ -124,11 +116,10 @@ public class MainActivity extends AppCompatActivity {
         btn4.setForeground(COLORS.get(task.get(3)));
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        logic = new MasterMind(COLOR_INDEX + 1, true);
+        logic = new MasterMind(COLOR_NUMBER, true);
         COLORS = Arrays.asList(
                 getDrawable(R.drawable.red_btn_style),
                 getDrawable(R.drawable.blue_btn_style),
@@ -205,35 +196,43 @@ public class MainActivity extends AppCompatActivity {
                 && itemTitle.equals(getString(R.string.same_colors))){
             item.setTitle(R.string.same_colors_OK);
             optionsMenu.findItem(R.id.different_colors_setting).setTitle(R.string.different_colors);
+            IS_DIFFERENT_COLORS = false;
         }
         else if( id == R.id.different_colors_setting
                 && itemTitle.equals(getString(R.string.different_colors))){
             item.setTitle(R.string.different_colors_OK);
             optionsMenu.findItem(R.id.same_color_setting).setTitle(R.string.same_colors);
+            IS_DIFFERENT_COLORS = true;
         }
         else if( id == R.id.colors_6 ){
             item.setTitle(R.string.colors_6_X);
             optionsMenu.findItem(R.id.colors_7).setTitle(R.string.colors_7);
             optionsMenu.findItem(R.id.colors_8).setTitle(R.string.colors_8);
             optionsMenu.findItem(R.id.colors_9).setTitle(R.string.colors_9);
+            COLOR_NUMBER = 6;
         }
         else if( id == R.id.colors_7 ){
             item.setTitle(R.string.colors_7_X);
             optionsMenu.findItem(R.id.colors_6).setTitle(R.string.colors_6);
             optionsMenu.findItem(R.id.colors_8).setTitle(R.string.colors_8);
             optionsMenu.findItem(R.id.colors_9).setTitle(R.string.colors_9);
+            COLOR_NUMBER = 7;
         }
         else if( id == R.id.colors_8 ){
             item.setTitle(R.string.colors_8_X);
             optionsMenu.findItem(R.id.colors_6).setTitle(R.string.colors_6);
             optionsMenu.findItem(R.id.colors_7).setTitle(R.string.colors_7);
             optionsMenu.findItem(R.id.colors_9).setTitle(R.string.colors_9);
+            COLOR_NUMBER = 8;
         }
         else if( id == R.id.colors_9 ){
             item.setTitle(R.string.colors_9_X);
             optionsMenu.findItem(R.id.colors_6).setTitle(R.string.colors_6);
             optionsMenu.findItem(R.id.colors_7).setTitle(R.string.colors_7);
             optionsMenu.findItem(R.id.colors_8).setTitle(R.string.colors_8);
+            COLOR_NUMBER = 9;
+        } else if ( id == R.id.new_game_setting) {
+            init();
         }
 
         return super.onOptionsItemSelected(item);

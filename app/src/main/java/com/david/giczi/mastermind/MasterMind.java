@@ -46,8 +46,8 @@ private List<Integer> task;
         return task;
     }
 
-    public List<Integer> evaluateTipp(int tipp1, int tipp2, int tipp3, int tipp4){
-        List<Integer> tips = Arrays.asList(tipp1, tipp2, tipp3, tipp4);
+    public List<Integer> evaluateTip(int tip1, int tip2, int tip3, int tip4){
+        List<Integer> tips = Arrays.asList(tip1, tip2, tip3, tip4);
         List<Integer> results = new ArrayList<>();
         for (int i = 0; i < task.size(); i++) {
                 if(task.get(i) == tips.get(i)) {
