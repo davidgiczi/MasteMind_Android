@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private void init(){
         logic = new MasterMind(COLOR_NUMBER, IS_DIFFERENT_COLORS);
-        showTask(logic.getTask());
         findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.background_circle));
@@ -55,8 +54,19 @@ public class MainActivity extends AppCompatActivity {
         btn3.setForeground(getDrawable(R.drawable.default_btn_style));
         btn4.setForeground(getDrawable(R.drawable.default_btn_style));
     }
-    private void runIntro(){
+    private void runIntro() {
 
+    }
+
+    private void congratulations(List<Integer> results){
+        if(results.size() == 4 &&
+                results.get(0) == 1 &&
+                results.get(1) == 1 &&
+                results.get(2) == 1 &&
+                results.get(3) == 1){
+            showTask(logic.getTask());
+            Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void evaluateFirstRowTip(){
@@ -97,13 +107,7 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
         }
     }
-        if(results.size() == 4 &&
-                results.get(0) == 1 &&
-                results.get(1) == 1 &&
-                results.get(2) == 1 &&
-                results.get(3) == 1){
-            Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
-        }
+       congratulations(results);
 }
     private void showTask(List<Integer> task){
         Button btn1 = (Button) findViewById(R.id.task_1);
@@ -137,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        showTask(logic.getTask());
         findViewById(R.id.ok_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
