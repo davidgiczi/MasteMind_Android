@@ -43,15 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void init(){
         logic = new MasterMind(COLOR_NUMBER, IS_DIFFERENT_COLORS);
-        Button task1 = (Button) findViewById(R.id.task_1);
-        Button task2 = (Button) findViewById(R.id.task_2);
-        Button task3 = (Button) findViewById(R.id.task_3);
-        Button task4 = (Button) findViewById(R.id.task_4);
-        task1.setForeground(getDrawable(R.drawable.default_btn_style));
-        task2.setForeground(getDrawable(R.drawable.default_btn_style));
-        task3.setForeground(getDrawable(R.drawable.default_btn_style));
-        task4.setForeground(getDrawable(R.drawable.default_btn_style));
-
+        runIntro();
         findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.background_circle));
@@ -67,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.circle_2_1).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_2_2).setForeground(getDrawable(R.drawable.background_circle));
-        findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_2_3).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_2_4).setForeground(getDrawable(R.drawable.background_circle));
         Button btn5 = (Button) findViewById(R.id.row_2_1);
         Button btn6 = (Button) findViewById(R.id.row_2_2);
@@ -79,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         btn8.setForeground(getDrawable(R.drawable.default_btn_style));
     }
     private void runIntro()  {
+        long endTime = System.currentTimeMillis() + 2 * 1000;
        Handler handler = new Handler();
        Runnable runnable = new Runnable() {
            @Override
@@ -92,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
                Button task4 = (Button) findViewById(R.id.task_4);
                task4.setForeground(COLORS.get((int) (Math.random() * COLOR_NUMBER)));
                handler.postDelayed(this, 100);
+               if( System.currentTimeMillis() > endTime ){
+                   handler.removeCallbacks(this);
+                   task1.setForeground(getDrawable(R.drawable.default_btn_style));
+                   task2.setForeground(getDrawable(R.drawable.default_btn_style));
+                   task3.setForeground(getDrawable(R.drawable.default_btn_style));
+                   task4.setForeground(getDrawable(R.drawable.default_btn_style));
+               }
            }
        };
        handler.post(runnable);
