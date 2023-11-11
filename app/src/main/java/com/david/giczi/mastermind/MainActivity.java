@@ -4,6 +4,8 @@ import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Handler;
 import android.view.View;
 import androidx.core.view.MenuCompat;
 import androidx.navigation.NavController;
@@ -41,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
     }
     private void init(){
         logic = new MasterMind(COLOR_NUMBER, IS_DIFFERENT_COLORS);
+        Button task1 = (Button) findViewById(R.id.task_1);
+        Button task2 = (Button) findViewById(R.id.task_2);
+        Button task3 = (Button) findViewById(R.id.task_3);
+        Button task4 = (Button) findViewById(R.id.task_4);
+        task1.setForeground(getDrawable(R.drawable.default_btn_style));
+        task2.setForeground(getDrawable(R.drawable.default_btn_style));
+        task3.setForeground(getDrawable(R.drawable.default_btn_style));
+        task4.setForeground(getDrawable(R.drawable.default_btn_style));
+
         findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.background_circle));
         findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.background_circle));
@@ -53,9 +64,37 @@ public class MainActivity extends AppCompatActivity {
         btn2.setForeground(getDrawable(R.drawable.default_btn_style));
         btn3.setForeground(getDrawable(R.drawable.default_btn_style));
         btn4.setForeground(getDrawable(R.drawable.default_btn_style));
-    }
-    private void runIntro() {
 
+        findViewById(R.id.circle_2_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_2_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_2_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn5 = (Button) findViewById(R.id.row_2_1);
+        Button btn6 = (Button) findViewById(R.id.row_2_2);
+        Button btn7 = (Button) findViewById(R.id.row_2_3);
+        Button btn8 = (Button) findViewById(R.id.row_2_4);
+        btn5.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn6.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn7.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn8.setForeground(getDrawable(R.drawable.default_btn_style));
+    }
+    private void runIntro()  {
+       Handler handler = new Handler();
+       Runnable runnable = new Runnable() {
+           @Override
+           public void run() {
+               Button task1 = (Button) findViewById(R.id.task_1);
+               task1.setForeground(COLORS.get((int) (Math.random() * COLOR_NUMBER)));
+               Button task2 = (Button) findViewById(R.id.task_2);
+               task2.setForeground(COLORS.get((int) (Math.random() * COLOR_NUMBER)));
+               Button task3 = (Button) findViewById(R.id.task_3);
+               task3.setForeground(COLORS.get((int) (Math.random() * COLOR_NUMBER)));
+               Button task4 = (Button) findViewById(R.id.task_4);
+               task4.setForeground(COLORS.get((int) (Math.random() * COLOR_NUMBER)));
+               handler.postDelayed(this, 100);
+           }
+       };
+       handler.post(runnable);
     }
 
     private void congratulations(List<Integer> results){
@@ -109,38 +148,49 @@ public class MainActivity extends AppCompatActivity {
     }
        congratulations(results);
 }
-    private void showTask(List<Integer> task){
-        Button btn1 = (Button) findViewById(R.id.task_1);
-        btn1.setForeground(COLORS.get(task.get(0)));
-        Button btn2 = (Button) findViewById(R.id.task_2);
-        btn2.setForeground(COLORS.get(task.get(1)));
-        Button btn3 = (Button) findViewById(R.id.task_3);
-        btn3.setForeground(COLORS.get(task.get(2)));
-        Button btn4 = (Button) findViewById(R.id.task_4);
-        btn4.setForeground(COLORS.get(task.get(3)));
+
+    private void evaluateSecondRowTip(){
+        Button btn5 = (Button) findViewById(R.id.row_2_1);
+        Button btn6 = (Button) findViewById(R.id.row_2_2);
+        Button btn7 = (Button) findViewById(R.id.row_2_3);
+        Button btn8 = (Button) findViewById(R.id.row_2_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn5.getForeground()),
+                getDrawableColorIndex(btn6.getForeground()),
+                getDrawableColorIndex(btn7.getForeground()),
+                getDrawableColorIndex(btn8.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_2_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_2_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_2_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_2_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_2_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_2_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_2_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_2_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        logic = new MasterMind(COLOR_NUMBER, true);
-        COLORS = Arrays.asList(
-                getDrawable(R.drawable.red_btn_style),
-                getDrawable(R.drawable.blue_btn_style),
-                getDrawable(R.drawable.purple_btn_style),
-                getDrawable(R.drawable.yellow_btn_style),
-                getDrawable(R.drawable.green_btn_style),
-                getDrawable(R.drawable.white_btn_style),
-                getDrawable(R.drawable.light_green_btn_style),
-                getDrawable(R.drawable.gray_btn_style),
-                getDrawable(R.drawable.black_btn_style));
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    private void addOnClickListenersForFirstRow(){
         findViewById(R.id.ok_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -175,6 +225,82 @@ public class MainActivity extends AppCompatActivity {
                 btn.setForeground(getDrawableForNextColor(btn.getForeground()));
             }
         });
+    }
+
+    private void addOnClickListenersForSecondRow(){
+        findViewById(R.id.ok_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateSecondRowTip();
+            }
+        });
+        findViewById(R.id.row_2_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_2_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_2_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_2_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_2_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_2_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_2_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_2_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+
+    private void showTask(List<Integer> task){
+        Button btn1 = (Button) findViewById(R.id.task_1);
+        btn1.setForeground(COLORS.get(task.get(0)));
+        Button btn2 = (Button) findViewById(R.id.task_2);
+        btn2.setForeground(COLORS.get(task.get(1)));
+        Button btn3 = (Button) findViewById(R.id.task_3);
+        btn3.setForeground(COLORS.get(task.get(2)));
+        Button btn4 = (Button) findViewById(R.id.task_4);
+        btn4.setForeground(COLORS.get(task.get(3)));
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        logic = new MasterMind(COLOR_NUMBER, true);
+        COLORS = Arrays.asList(
+                getDrawable(R.drawable.red_btn_style),
+                getDrawable(R.drawable.blue_btn_style),
+                getDrawable(R.drawable.purple_btn_style),
+                getDrawable(R.drawable.yellow_btn_style),
+                getDrawable(R.drawable.green_btn_style),
+                getDrawable(R.drawable.white_btn_style),
+                getDrawable(R.drawable.light_green_btn_style),
+                getDrawable(R.drawable.gray_btn_style),
+                getDrawable(R.drawable.black_btn_style));
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setSupportActionBar(binding.toolbar);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        runIntro();
+
+        addOnClickListenersForFirstRow();
+        addOnClickListenersForSecondRow();
     }
 
     @Override
