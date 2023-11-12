@@ -211,8 +211,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void endOfGame(List<Integer> results){
-        if( results.contains(2) ){
-            showTask(logic.getTask());
+        showTask(logic.getTask());
+        if(results.size() == 4 &&
+                results.get(0) == 1 &&
+                results.get(1) == 1 &&
+                results.get(2) == 1 &&
+                results.get(3) == 1){
+            Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
+        }
+       else if( results.isEmpty() || results.contains(2) ){
             Toast.makeText(this, "Sebaj, legközelebb!", Toast.LENGTH_LONG).show();
         }
     }
