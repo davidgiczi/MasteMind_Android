@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
                 results.get(3) == 1){
             Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
         }
-       else if( results.isEmpty() || results.contains(2) ){
+       else if( results.size() < 4 || results.contains(2) ){
             Toast.makeText(this, "Sebaj, legközelebb!", Toast.LENGTH_LONG).show();
         }
     }
