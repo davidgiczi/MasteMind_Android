@@ -19,8 +19,6 @@ import android.widget.Button;
 import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -69,6 +67,110 @@ public class MainActivity extends AppCompatActivity {
         btn6.setForeground(getDrawable(R.drawable.default_btn_style));
         btn7.setForeground(getDrawable(R.drawable.default_btn_style));
         btn8.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_3_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_3_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_3_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_3_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn9 = (Button) findViewById(R.id.row_3_1);
+        Button btn10 = (Button) findViewById(R.id.row_3_2);
+        Button btn11 = (Button) findViewById(R.id.row_3_3);
+        Button btn12 = (Button) findViewById(R.id.row_3_4);
+        btn9.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn10.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn11.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn12.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_4_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_4_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_4_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_4_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn13 = (Button) findViewById(R.id.row_4_1);
+        Button btn14 = (Button) findViewById(R.id.row_4_2);
+        Button btn15 = (Button) findViewById(R.id.row_4_3);
+        Button btn16 = (Button) findViewById(R.id.row_4_4);
+        btn13.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn14.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn15.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn16.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_5_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_5_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_5_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_5_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn17 = (Button) findViewById(R.id.row_5_1);
+        Button btn18 = (Button) findViewById(R.id.row_5_2);
+        Button btn19 = (Button) findViewById(R.id.row_5_3);
+        Button btn20 = (Button) findViewById(R.id.row_5_4);
+        btn17.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn18.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn19.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn20.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_6_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_6_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_6_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_6_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn21 = (Button) findViewById(R.id.row_6_1);
+        Button btn22 = (Button) findViewById(R.id.row_6_2);
+        Button btn23 = (Button) findViewById(R.id.row_6_3);
+        Button btn24 = (Button) findViewById(R.id.row_6_4);
+        btn21.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn22.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn23.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn24.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_7_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_7_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_7_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_7_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn25 = (Button) findViewById(R.id.row_7_1);
+        Button btn26 = (Button) findViewById(R.id.row_7_2);
+        Button btn27 = (Button) findViewById(R.id.row_7_3);
+        Button btn28 = (Button) findViewById(R.id.row_7_4);
+        btn25.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn26.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn27.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn28.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_8_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_8_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_8_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_8_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn29 = (Button) findViewById(R.id.row_8_1);
+        Button btn30 = (Button) findViewById(R.id.row_8_2);
+        Button btn31 = (Button) findViewById(R.id.row_8_3);
+        Button btn32 = (Button) findViewById(R.id.row_8_4);
+        btn29.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn30.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn31.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn32.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_9_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_9_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_9_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_9_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn33 = (Button) findViewById(R.id.row_9_1);
+        Button btn34 = (Button) findViewById(R.id.row_9_2);
+        Button btn35 = (Button) findViewById(R.id.row_9_3);
+        Button btn36 = (Button) findViewById(R.id.row_9_4);
+        btn33.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn34.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn35.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn36.setForeground(getDrawable(R.drawable.default_btn_style));
+
+        findViewById(R.id.circle_10_1).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_10_2).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_10_3).setForeground(getDrawable(R.drawable.background_circle));
+        findViewById(R.id.circle_10_4).setForeground(getDrawable(R.drawable.background_circle));
+        Button btn37 = (Button) findViewById(R.id.row_10_1);
+        Button btn38 = (Button) findViewById(R.id.row_10_2);
+        Button btn39 = (Button) findViewById(R.id.row_10_3);
+        Button btn40 = (Button) findViewById(R.id.row_10_4);
+        btn37.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn38.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn39.setForeground(getDrawable(R.drawable.default_btn_style));
+        btn40.setForeground(getDrawable(R.drawable.default_btn_style));
     }
     private void runIntro()  {
         long endTime = System.currentTimeMillis() + 2 * 1000;
@@ -108,7 +210,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void evaluateFirstRowTip(){
+    private void endOfGame(List<Integer> results){
+        if( results.contains(2) ){
+            showTask(logic.getTask());
+            Toast.makeText(this, "Sebaj, legközelebb!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void evaluateFirstRowTips(){
     Button btn1 = (Button) findViewById(R.id.row_1_1);
     Button btn2 = (Button) findViewById(R.id.row_1_2);
     Button btn3 = (Button) findViewById(R.id.row_1_3);
@@ -149,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
        congratulations(results);
 }
 
-    private void evaluateSecondRowTip(){
+    private void evaluateSecondRowTips(){
         Button btn5 = (Button) findViewById(R.id.row_2_1);
         Button btn6 = (Button) findViewById(R.id.row_2_2);
         Button btn7 = (Button) findViewById(R.id.row_2_3);
@@ -190,11 +299,339 @@ public class MainActivity extends AppCompatActivity {
         congratulations(results);
     }
 
+    private void evaluateThirdRowTips(){
+        Button btn9 = (Button) findViewById(R.id.row_3_1);
+        Button btn10 = (Button) findViewById(R.id.row_3_2);
+        Button btn11 = (Button) findViewById(R.id.row_3_3);
+        Button btn12 = (Button) findViewById(R.id.row_3_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn9.getForeground()),
+                getDrawableColorIndex(btn10.getForeground()),
+                getDrawableColorIndex(btn11.getForeground()),
+                getDrawableColorIndex(btn12.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_3_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_3_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_3_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_3_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_3_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_3_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_3_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_3_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+
+
+    private void evaluateForthRowTips(){
+        Button btn13 = (Button) findViewById(R.id.row_4_1);
+        Button btn14 = (Button) findViewById(R.id.row_4_2);
+        Button btn15 = (Button) findViewById(R.id.row_4_3);
+        Button btn16 = (Button) findViewById(R.id.row_4_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn13.getForeground()),
+                getDrawableColorIndex(btn14.getForeground()),
+                getDrawableColorIndex(btn15.getForeground()),
+                getDrawableColorIndex(btn16.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_4_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_4_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_4_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_4_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_4_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_4_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_4_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_4_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+
+    private void evaluateFifthRowTips(){
+        Button btn17 = (Button) findViewById(R.id.row_5_1);
+        Button btn18 = (Button) findViewById(R.id.row_5_2);
+        Button btn19 = (Button) findViewById(R.id.row_5_3);
+        Button btn20 = (Button) findViewById(R.id.row_5_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn17.getForeground()),
+                getDrawableColorIndex(btn18.getForeground()),
+                getDrawableColorIndex(btn19.getForeground()),
+                getDrawableColorIndex(btn20.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_5_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_5_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_5_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_5_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_5_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_5_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_5_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_5_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+
+    private void evaluateSixthRowTips(){
+        Button btn21 = (Button) findViewById(R.id.row_6_1);
+        Button btn22 = (Button) findViewById(R.id.row_6_2);
+        Button btn23 = (Button) findViewById(R.id.row_6_3);
+        Button btn24 = (Button) findViewById(R.id.row_6_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn21.getForeground()),
+                getDrawableColorIndex(btn22.getForeground()),
+                getDrawableColorIndex(btn23.getForeground()),
+                getDrawableColorIndex(btn24.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_6_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_6_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_6_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_6_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_6_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_6_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_6_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_6_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+
+    private void evaluateSeventhRowTips(){
+        Button btn25 = (Button) findViewById(R.id.row_7_1);
+        Button btn26 = (Button) findViewById(R.id.row_7_2);
+        Button btn27 = (Button) findViewById(R.id.row_7_3);
+        Button btn28 = (Button) findViewById(R.id.row_7_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn25.getForeground()),
+                getDrawableColorIndex(btn26.getForeground()),
+                getDrawableColorIndex(btn27.getForeground()),
+                getDrawableColorIndex(btn28.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_7_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_7_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_7_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_7_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_7_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_7_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_7_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_7_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+    private void evaluateEighthRowTips(){
+        Button btn29 = (Button) findViewById(R.id.row_8_1);
+        Button btn30 = (Button) findViewById(R.id.row_8_2);
+        Button btn31 = (Button) findViewById(R.id.row_8_3);
+        Button btn32 = (Button) findViewById(R.id.row_8_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn29.getForeground()),
+                getDrawableColorIndex(btn30.getForeground()),
+                getDrawableColorIndex(btn31.getForeground()),
+                getDrawableColorIndex(btn32.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_8_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_8_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_8_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_8_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_8_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_8_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_8_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_8_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+
+    private void evaluateNinthRowTips(){
+        Button btn33 = (Button) findViewById(R.id.row_9_1);
+        Button btn34 = (Button) findViewById(R.id.row_9_2);
+        Button btn35 = (Button) findViewById(R.id.row_9_3);
+        Button btn36 = (Button) findViewById(R.id.row_9_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn33.getForeground()),
+                getDrawableColorIndex(btn34.getForeground()),
+                getDrawableColorIndex(btn35.getForeground()),
+                getDrawableColorIndex(btn36.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_9_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_9_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_9_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_9_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_9_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_9_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_9_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_9_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        congratulations(results);
+    }
+
+    private void evaluateTenthRowTips(){
+        Button btn37 = (Button) findViewById(R.id.row_10_1);
+        Button btn38 = (Button) findViewById(R.id.row_10_2);
+        Button btn39 = (Button) findViewById(R.id.row_10_3);
+        Button btn40 = (Button) findViewById(R.id.row_10_4);
+        List<Integer> results = logic.evaluateTip(
+                getDrawableColorIndex(btn37.getForeground()),
+                getDrawableColorIndex(btn38.getForeground()),
+                getDrawableColorIndex(btn39.getForeground()),
+                getDrawableColorIndex(btn40.getForeground()));
+
+        for (int i = 0; i < results.size(); i++) {
+
+            if( i == 0 && results.get(i) == 1 ){
+                findViewById(R.id.circle_10_1).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 0 && results.get(i) == 2 ){
+                findViewById(R.id.circle_10_1).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 1 && results.get(i) == 1 ){
+                findViewById(R.id.circle_10_2).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 1 && results.get(i) == 2 ){
+                findViewById(R.id.circle_10_2).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 2 && results.get(i) == 1 ){
+                findViewById(R.id.circle_10_3).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 2 && results.get(i) == 2 ){
+                findViewById(R.id.circle_10_3).setForeground(getDrawable(R.drawable.black_circle));
+            }
+            else if( i == 3 && results.get(i) == 1 ){
+                findViewById(R.id.circle_10_4).setForeground(getDrawable(R.drawable.white_circle));
+            }
+            else if( i == 3 && results.get(i) == 2 ){
+                findViewById(R.id.circle_10_4).setForeground(getDrawable(R.drawable.black_circle));
+            }
+        }
+        endOfGame(results);
+    }
+
     private void addOnClickListenersForFirstRow(){
         findViewById(R.id.ok_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                evaluateFirstRowTip();
+                evaluateFirstRowTips();
             }
         });
         findViewById(R.id.row_1_1).setOnClickListener(new View.OnClickListener() {
@@ -231,7 +668,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ok_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                evaluateSecondRowTip();
+                evaluateSecondRowTips();
             }
         });
         findViewById(R.id.row_2_1).setOnClickListener(new View.OnClickListener() {
@@ -264,6 +701,298 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void addOnClickListenersForThirdRow(){
+        findViewById(R.id.ok_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateThirdRowTips();
+            }
+        });
+        findViewById(R.id.row_3_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_3_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_3_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_3_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_3_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_3_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_3_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_3_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+    private void addOnClickListenersForForthRow(){
+        findViewById(R.id.ok_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateForthRowTips();
+            }
+        });
+        findViewById(R.id.row_4_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_4_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_4_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_4_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_4_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_4_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_4_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_4_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+
+    private void addOnClickListenersForFifthRow(){
+        findViewById(R.id.ok_5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateFifthRowTips();
+            }
+        });
+        findViewById(R.id.row_5_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_5_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_5_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_5_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_5_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_5_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_5_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_5_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+
+    private void addOnClickListenersForSixthRow(){
+        findViewById(R.id.ok_6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateSixthRowTips();
+            }
+        });
+        findViewById(R.id.row_6_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_6_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_6_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_6_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_6_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_6_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_6_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_6_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+
+    private void addOnClickListenersForSeventhRow(){
+        findViewById(R.id.ok_7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateSeventhRowTips();
+            }
+        });
+        findViewById(R.id.row_7_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_7_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_7_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_7_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_7_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_7_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_7_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_7_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+
+    private void addOnClickListenersForEighthRow(){
+        findViewById(R.id.ok_8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateEighthRowTips();
+            }
+        });
+        findViewById(R.id.row_8_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_8_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_8_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_8_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_8_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_8_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_8_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_8_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+    private void addOnClickListenersForNinthRow(){
+        findViewById(R.id.ok_9).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateNinthRowTips();
+            }
+        });
+        findViewById(R.id.row_9_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_9_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_9_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_9_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_9_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_9_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_9_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_9_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
+    private void addOnClickListenersForTenthRow(){
+        findViewById(R.id.ok_10).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                evaluateTenthRowTips();
+            }
+        });
+        findViewById(R.id.row_10_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_10_1);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_10_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_10_2);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_10_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_10_3);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+        findViewById(R.id.row_10_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) findViewById(R.id.row_10_4);
+                btn.setForeground(getDrawableForNextColor(btn.getForeground()));
+            }
+        });
+    }
     private void showTask(List<Integer> task){
         Button btn1 = (Button) findViewById(R.id.task_1);
         btn1.setForeground(COLORS.get(task.get(0)));
@@ -296,11 +1025,17 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         runIntro();
-
         addOnClickListenersForFirstRow();
         addOnClickListenersForSecondRow();
+        addOnClickListenersForThirdRow();
+        addOnClickListenersForForthRow();
+        addOnClickListenersForFifthRow();
+        addOnClickListenersForSixthRow();
+        addOnClickListenersForSeventhRow();
+        addOnClickListenersForEighthRow();
+        addOnClickListenersForNinthRow();
+        addOnClickListenersForTenthRow();
     }
 
     @Override
