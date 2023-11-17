@@ -31,6 +31,40 @@ public class MainActivity extends AppCompatActivity {
     private static boolean IS_DIFFERENT_COLORS = true;
     private MasterMind logic;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        logic = new MasterMind(COLOR_NUMBER, true);
+        COLORS = Arrays.asList(
+                getDrawable(R.drawable.red_btn_style),
+                getDrawable(R.drawable.blue_btn_style),
+                getDrawable(R.drawable.purple_btn_style),
+                getDrawable(R.drawable.yellow_btn_style),
+                getDrawable(R.drawable.green_btn_style),
+                getDrawable(R.drawable.white_btn_style),
+                getDrawable(R.drawable.light_green_btn_style),
+                getDrawable(R.drawable.gray_btn_style),
+                getDrawable(R.drawable.black_btn_style));
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setSupportActionBar(binding.toolbar);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        runIntro();
+        addOnClickListenersForFirstRow();
+        addOnClickListenersForSecondRow();
+        addOnClickListenersForThirdRow();
+        addOnClickListenersForForthRow();
+        addOnClickListenersForFifthRow();
+        addOnClickListenersForSixthRow();
+        addOnClickListenersForSeventhRow();
+        addOnClickListenersForEighthRow();
+        addOnClickListenersForNinthRow();
+        addOnClickListenersForTenthRow();
+    }
+
     private Drawable getDrawableForNextColor(Drawable actualDrawable){
         int actualDrawableIndex = COLORS.indexOf(actualDrawable);
         return actualDrawableIndex == COLOR_NUMBER - 1 ? COLORS.get(0) : COLORS.get(actualDrawableIndex + 1);
@@ -1011,39 +1045,6 @@ public class MainActivity extends AppCompatActivity {
         btn4.setForeground(COLORS.get(task.get(3)));
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        logic = new MasterMind(COLOR_NUMBER, true);
-        COLORS = Arrays.asList(
-                getDrawable(R.drawable.red_btn_style),
-                getDrawable(R.drawable.blue_btn_style),
-                getDrawable(R.drawable.purple_btn_style),
-                getDrawable(R.drawable.yellow_btn_style),
-                getDrawable(R.drawable.green_btn_style),
-                getDrawable(R.drawable.white_btn_style),
-                getDrawable(R.drawable.light_green_btn_style),
-                getDrawable(R.drawable.gray_btn_style),
-                getDrawable(R.drawable.black_btn_style));
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        runIntro();
-        addOnClickListenersForFirstRow();
-        addOnClickListenersForSecondRow();
-        addOnClickListenersForThirdRow();
-        addOnClickListenersForForthRow();
-        addOnClickListenersForFifthRow();
-        addOnClickListenersForSixthRow();
-        addOnClickListenersForSeventhRow();
-        addOnClickListenersForEighthRow();
-        addOnClickListenersForNinthRow();
-        addOnClickListenersForTenthRow();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
