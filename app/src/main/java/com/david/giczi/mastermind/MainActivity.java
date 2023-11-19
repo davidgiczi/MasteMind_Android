@@ -273,28 +273,28 @@ public class MainActivity extends AppCompatActivity {
     for (int i = 0; i < results.size(); i++) {
 
         if( i == 0 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.white_circle));
-        }
-        else if( i == 0 && results.get(i) == 2 ){
             findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.black_circle));
         }
-        else if( i == 1 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.white_circle));
+        else if( i == 0 && results.get(i) == 2 ){
+            findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.white_circle));
         }
-        else if( i == 1 && results.get(i) == 2 ){
+        else if( i == 1 && results.get(i) == 1 ){
             findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.black_circle));
         }
-        else if( i == 2 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.white_circle));
+        else if( i == 1 && results.get(i) == 2 ){
+            findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.white_circle));
         }
-        else if( i == 2 && results.get(i) == 2 ){
+        else if( i == 2 && results.get(i) == 1 ){
             findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.black_circle));
         }
+        else if( i == 2 && results.get(i) == 2 ){
+            findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.white_circle));
+        }
         else if( i == 3 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.white_circle));
+            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
         }
         else if( i == 3 && results.get(i) == 2 ){
-            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
+            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.white_circle));
         }
     }
        congratulations(results);
