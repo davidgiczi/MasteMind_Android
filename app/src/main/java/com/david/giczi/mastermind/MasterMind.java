@@ -55,13 +55,13 @@ private List<Integer> task = new ArrayList<>();
                 if(task.get(i) == tips.get(i)) {
                     tips.set(i, -1);
                     task.set(i, -2);
-                    results.add(1);
+                    results.add(2);
                 }
         }
         for (int i = 0; i < task.size(); i++) {
             if(task.contains(tips.get(i))){
-                task.set(i, -2);
-                results.add(2);
+                task.set(task.indexOf(tips.get(i)), -2);
+                results.add(1);
             }
         }
         return results;

@@ -236,10 +236,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void congratulations(List<Integer> results){
         if(results.size() == 4 &&
-                results.get(0) == 1 &&
-                results.get(1) == 1 &&
-                results.get(2) == 1 &&
-                results.get(3) == 1){
+                results.get(0) == 2 &&
+                results.get(1) == 2 &&
+                results.get(2) == 2 &&
+                results.get(3) == 2){
             showTask(logic.getTask());
             Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
         }
@@ -248,13 +248,13 @@ public class MainActivity extends AppCompatActivity {
     private void endOfGame(List<Integer> results){
         showTask(logic.getTask());
         if(results.size() == 4 &&
-                results.get(0) == 1 &&
-                results.get(1) == 1 &&
-                results.get(2) == 1 &&
-                results.get(3) == 1){
+                results.get(0) == 2 &&
+                results.get(1) == 2 &&
+                results.get(2) == 2 &&
+                results.get(3) == 2){
             Toast.makeText(this, "Gratulálunk, ügyes vagy!", Toast.LENGTH_LONG).show();
         }
-       else if( results.size() < 4 || results.contains(2) ){
+       else if( results.size() < 4 || results.contains(1) ){
             Toast.makeText(this, "Sebaj, legközelebb!", Toast.LENGTH_LONG).show();
         }
     }
@@ -273,28 +273,28 @@ public class MainActivity extends AppCompatActivity {
     for (int i = 0; i < results.size(); i++) {
 
         if( i == 0 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.black_circle));
-        }
-        else if( i == 0 && results.get(i) == 2 ){
             findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.white_circle));
         }
-        else if( i == 1 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.black_circle));
+        else if( i == 0 && results.get(i) == 2 ){
+            findViewById(R.id.circle_1_1).setForeground(getDrawable(R.drawable.black_circle));
         }
-        else if( i == 1 && results.get(i) == 2 ){
+        else if( i == 1 && results.get(i) == 1 ){
             findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.white_circle));
         }
-        else if( i == 2 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.black_circle));
+        else if( i == 1 && results.get(i) == 2 ){
+            findViewById(R.id.circle_1_2).setForeground(getDrawable(R.drawable.black_circle));
         }
-        else if( i == 2 && results.get(i) == 2 ){
+        else if( i == 2 && results.get(i) == 1 ){
             findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.white_circle));
         }
+        else if( i == 2 && results.get(i) == 2 ){
+            findViewById(R.id.circle_1_3).setForeground(getDrawable(R.drawable.black_circle));
+        }
         else if( i == 3 && results.get(i) == 1 ){
-            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
+            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.white_circle));
         }
         else if( i == 3 && results.get(i) == 2 ){
-            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.white_circle));
+            findViewById(R.id.circle_1_4).setForeground(getDrawable(R.drawable.black_circle));
         }
     }
        congratulations(results);
